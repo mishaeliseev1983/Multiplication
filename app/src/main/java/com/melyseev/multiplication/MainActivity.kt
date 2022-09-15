@@ -1,0 +1,19 @@
+package com.melyseev.multiplication
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val fragmentLevels = FragmentLevels()
+        supportFragmentManager.
+        beginTransaction().
+        add(R.id.container, fragmentLevels).
+        commit()
+    }
+
+
+}
